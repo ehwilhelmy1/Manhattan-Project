@@ -1,10 +1,22 @@
-GoldStandardTheme
+Manhattan-Theme
 =================
 Using Bourbon, Neat, Bitters, Refill to build a responsive theme. 
 
-Commands
+Instructions
 =================
+First create a local version via terminal:
 
-To watch scss
+Install local version:
+1. git clone https://github.com/lpwilhelmy/Manhattan-Project.git
 
-sass --watch app.scss:app.css
+How to commit changes: 
+1. $ git status
+2. $ git add . 
+3. $ git status
+4. $ git commit -m "[descriptive message]"
+5. $ git push
+6. $ git push
+
+How to compile your SASS 
+
+1. $ sass --watch app.scss:app.css
