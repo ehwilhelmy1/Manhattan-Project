@@ -3,7 +3,7 @@
   $hero-background-bottom: adjust-hue($hero-background-top, -70);
   $hero-color: white;
   $gradient-angle: 10deg;
-  $hero-image: 'http://gophotoprints.lifepics.com/common/images/retail/productcategory/novelties/banners/banner-photogifts-1.jpg';
+  $hero-image: '../img/home-banner.jpg';
 
   @include background(url($hero-image), no-repeat);
 
