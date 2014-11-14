@@ -7,6 +7,7 @@ Instructions
 First create a local version via terminal:
 
 Install local version:
+
 1. git clone https://github.com/lpwilhelmy/Manhattan-Project.git
 
 How to commit changes: 
