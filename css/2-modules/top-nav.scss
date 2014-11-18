@@ -13,12 +13,17 @@ header.navigation {
   $navigation-submenu-padding: 1em;
   $navigation-submenu-width: 12em;
   $horizontal-bar-mode: $large-screen;
+  $info-height: 30px;
 
   background-color: $navigation-background;
   border-bottom: 1px solid darken($navigation-background, 10);
   height: $navigation-height;
   width: 100%;
   z-index: 999;
+   &.info{
+    height: $info-height;
+    background: $light-gray
+   }
 
   .navigation-wrapper {
     @include clearfix;
@@ -88,9 +93,28 @@ header.navigation {
     }
   }
 
+  ul#info-menu {    
+    -webkit-transform-style: preserve-3d; // stop webkit flicker
+    clear: both;
+    display: none;
+    margin: 0 auto;
+    overflow: visible;
+    padding: 0;
+    width: 100%;
+    z-index: 9999;
+
+    @include media ($horizontal-bar-mode) {
+      display: inline;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
   // The nav items
 
   ul li.nav-link {
+
+
     background: $navigation-background;
     display: block;
     line-height: $navigation-height;
@@ -115,6 +139,47 @@ header.navigation {
 
       @include media ($horizontal-bar-mode) {
         padding-right: 1em;
+      }
+
+      &:hover {
+        color: $navigation-color-hover;
+      }
+    }
+  }
+
+  .active-nav-item a {
+    border-bottom: 1px solid $navigation-active-link-color;
+    padding-bottom: 3px;
+  }
+ul li.info-link {
+
+ 
+    background: $navigation-background;
+    display: block;
+    line-height: $info-height;
+    overflow: hidden;
+    padding-right: .4em;
+    text-align: right;
+    width: 100%;
+    z-index: 9999;
+    font-size:.7em;
+    border-right:1px solid $medium-gray;
+
+    @include media ($horizontal-bar-mode) {
+      background: transparent;
+      display: inline;
+      line-height: $info-height;
+      text-decoration: none;
+      width: auto;
+    }
+
+    a {
+      color: $navigation-color;
+      display: inline-block;
+      font-weight: 400;
+
+      @include media ($horizontal-bar-mode) {
+        padding-right: .4em;
       }
 
       &:hover {
@@ -268,6 +333,23 @@ header.navigation {
     text-transform: uppercase;
     padding: .75em 1em;
   }
+
+  .info-tools {
+    @include clearfix;
+    display: block;
+    padding-right: $navigation-padding;
+    padding-left: $navigation-padding/2;
+    clear: both;
+    background: #505050;
+
+    @include media($large-screen) {
+      background: transparent;
+      float: right;
+      clear: none;
+    }
+  }
+
+
 
   // Search bar
 
