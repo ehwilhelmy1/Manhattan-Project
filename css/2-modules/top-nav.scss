@@ -32,11 +32,9 @@ header.navigation {
     z-index: 9999;
   }
 
-  .logo {
-    float: left;    
+  .logo {   
     max-height: $navigation-height;
-    padding-left: $navigation-padding;
-    padding-right: 2em;
+    @include span-columns(3);
 
     img {
       max-height: $navigation-height;

@@ -1,3 +1,4 @@
+
 .footer {
     $footer-background: white;
     $footer-color: desaturate(darken($base-accent-color, 20), 30);
@@ -6,22 +7,42 @@
     background: $footer-background;
     padding: $base-spacing*2 $gutter;
     width: 100%;
-    .footer-logo {
-        text-align: center;
-        margin-bottom: 2em;
-        img {
-            height: 3em;
-        }
-    }
+    
     .footer-links {
-        @include clearfix;
-        margin-bottom: $base-spacing;
-        @include media($medium-screen) {
-            @include shift(3);
-            margin-left:31%        
-          }
+        @include outer-container;
+        .print{
+            @include span-columns(2);
+            @include media($large-screen);
+        }
+        .create{
+            @include span-columns(2);
+            @include media($large-screen);
+        }
+
+        .support{
+            @include span-columns(2);
+            @include shift(4);
+            @include media($large-screen);
+        }
+        li a{
+            color:#353738;
+        }
+        h5{
+            margin-bottom: 15px;
+        }
+
     }
-    ul {
+
+    hr{
+        @include outer-container;
+    }
+
+     p {
+        color: $footer-disclaimer-color;
+        @include outer-container;
+    }
+
+    /*ul {
         margin-bottom: $base-spacing*2;
         @include media($medium-screen) {
             @include span-columns(3);
@@ -66,5 +87,5 @@
         max-width: 60em;
         width:60em
      
-    }
+    }*/
 }

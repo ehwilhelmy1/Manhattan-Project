@@ -9,8 +9,7 @@
 
   background-repeat: no-repeat;
   background-position: top;
-  background-size: cover
-  ;
+  background-size: cover;
   padding-bottom: 4em;
 
   .hero-logo img {
@@ -30,15 +29,17 @@
       @include button(simple, $base-background-color);
       font-size: $base-font-size;
       outline: none;
+      float: left;
+      clear: both;
     }
 
     .hero-copy {
-      text-align: center;
-      
+      @include span-columns(6);
       h1 {
+        text-align: left;
         font-size: 1.6em;
         margin-bottom: .5em;
-
+        @include span-columns(6 of 6);
         @include media($large-screen) {
           font-size: 1.8em;
         }
@@ -46,16 +47,16 @@
 
       p {
         font-family: $serif;
-        margin: auto;
         margin-bottom: 3em; 
         font-weight: 200;
         line-height: 1.4em;
-
+        text-align: left;
+        @include span-columns(6 of 6);
         @include media($large-screen) {
           font-size: 1.1em;
-          max-width: 40%;
         }
       }
     }
   }
 }
+
