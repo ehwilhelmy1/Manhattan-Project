@@ -28,6 +28,7 @@ $blue: #477DCA;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #DDD;
+$lighter-gray:#f7f7f7;
 $light-red: #FBE3E4;
 $light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
@@ -38,7 +39,7 @@ $sale:#ef647e;
 $transparent:transparent;
 
 // Background Color
-$base-background-color: $white;
+$base-background-color: $lighter-gray;
 
 // Font Colors
 $base-font-color: $dark-gray;
@@ -48,6 +49,8 @@ $base-accent-color: $teal;
 $base-link-color: $base-accent-color;
 $hover-link-color: darken($base-accent-color, 15);
 $base-button-color: $transparent;
+$primary-button-color: $teal;
+$secondary-button-color: $white;
 $hover-button-color: $hover-link-color;
 
 // Flash Colors

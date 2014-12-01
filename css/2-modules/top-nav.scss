@@ -4,6 +4,7 @@ header.navigation {
   $navigation-color: #676767;
   $navigation-color-hover: #69c4a1;
   $navigation-height: 60px;
+  $logo-height: 80px;
   $navigation-nav-button-background: $base-accent-color;
   $navigation-nav-button-background-hover: lighten($navigation-background, 10);
   $navigation-nav-button-border: 1px solid lighten($navigation-nav-button-background, 20);
@@ -34,11 +35,11 @@ header.navigation {
 
   .logo {   
     max-height: $navigation-height;
-    @include span-columns(3);
+    @include span-columns(1);
 
     img {
-      max-height: $navigation-height;
-      padding: .8em 0;
+      max-height: $logo-height;
+      padding: 0;
     }
   }
 

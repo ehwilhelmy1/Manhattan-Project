@@ -6,4 +6,14 @@ input[type="submit"] {
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
+  &.primary{
+  	 @extend %primary-button;
+  	  float:right;
+
+  }
+   &.secondary{
+  	 @extend %secondary-button;
+
+
+  }
 }
