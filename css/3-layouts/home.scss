@@ -3,10 +3,10 @@
 .content{
 $blockPadding: 50px 0;
 $uppercase: uppercase;
- .fullSpan{
+ .full-span{
  	width:100%;
  	background-color: #f7f7f7;
- 	.messageBlock{ 
+ 	.message-block{ 
   	padding:$blockPadding;
   	@include outer-container; 
   		h5{
@@ -18,7 +18,7 @@ $uppercase: uppercase;
   }
  }
   
-  .productBlock{
+  .product-block{
   	padding:$blockPadding;
   	@include outer-container;
   	h5{
@@ -43,7 +43,7 @@ $uppercase: uppercase;
         color:$sale;
       }
 
-      
+
 	@mixin grid-item-columns($columns) {
   width: (100% / 12) * $columns;
 }
@@ -184,6 +184,7 @@ $uppercase: uppercase;
 }
 
 }
+//flex boxes
 
 $flex-box-border-color: $light-gray;
 $flex-box-background: lighten($light-gray, 10);
@@ -248,9 +249,78 @@ $flex-box-top-colors:
 }
 
 .flex-box-big {
-  @include flex(1 1 40em);
+  @include flex(1 1 30em);
 }
 
 
+.intro-text {
+  $intro-text-width: 60%;
+  background:lighten($light-gray, 10);
+
+  margin-bottom: 5em;
+  margin-top: 4em;
+  text-align: center;
+  padding:50px 20px;
+
+  h2 {
+    font-family: $sans-serif;
+    font-weight: 600;
+    margin-bottom: .6em;
+
+    @include media($large-screen) {
+      font-size: 2em;
+      margin-bottom: .4em;
+    }
+  }
+
+  h3 {
+    background: $base-accent-color;
+    color: white;
+    display: inline-block;
+    font-size: .7em;
+    font-weight: 800;
+    margin-bottom: 2em;
+    padding: 3px 8px;
+    text-transform: uppercase;
+
+    @include media($large-screen) {
+      margin-bottom: 3.3em;
+    }
+  }
+
+  h4 {
+    color: lighten($base-font-color, 20);
+    font-size: 1.3em;
+    font-weight: 300;
+    line-height: 1.4em;
+    margin: 0 auto 1em;
+
+    @include media($large-screen) {
+      font-size: 1.7em;
+      line-height: 1.35em;
+      margin: 0 auto 1em;
+      width: $intro-text-width;
+    }    
+  }
+
+  p {
+    margin: auto;
+
+    @include media($large-screen) {
+      width: $intro-text-width;
+    }
+
+    a {
+      font-size: .8em;
+      font-weight: 400;
+      text-transform: uppercase;
+
+      span {
+        font-size: 1.3em;
+        line-height: 0;
+      }
+    }
+  }
+}
 
 
