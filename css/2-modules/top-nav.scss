@@ -1,6 +1,6 @@
 header.navigation {
   $navigation-padding: 1em;
-  $navigation-background: $white;
+  $navigation-background: lighten($white, 90);
   $navigation-color: #676767;
   $navigation-color-hover: #69c4a1;
   $navigation-height: 60px;
@@ -11,7 +11,7 @@ header.navigation {
   $navigation-search-border: 1px solid darken($navigation-background, 5);
   $navigation-active-link-color: transparentize(white, 0.5);
   $navigation-submenu-padding: 1em;
-  $navigation-submenu-width: 12em;
+  $navigation-submenu-width: 22em;
   $horizontal-bar-mode: $large-screen;
   $info-height: 30px;
 
