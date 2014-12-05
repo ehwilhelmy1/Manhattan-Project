@@ -207,7 +207,7 @@ samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
-button, header.navigation .sign-up,
+button, header.navigation .sign-up, .modal-b .btn,
 input,
 optgroup,
 select,
@@ -222,7 +222,7 @@ textarea {
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
-button, header.navigation .sign-up {
+button, header.navigation .sign-up, .modal-b .btn {
   overflow: visible; }
 
 /**
@@ -231,7 +231,7 @@ button, header.navigation .sign-up {
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
-button, header.navigation .sign-up,
+button, header.navigation .sign-up, .modal-b .btn,
 select {
   text-transform: none; }
 
@@ -242,7 +242,7 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-button, header.navigation .sign-up,
+button, header.navigation .sign-up, .modal-b .btn,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -254,14 +254,14 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-button[disabled], header.navigation [disabled].sign-up,
+button[disabled], header.navigation [disabled].sign-up, .modal-b [disabled].btn,
 html input[disabled] {
   cursor: default; }
 
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-button::-moz-focus-inner, header.navigation .sign-up::-moz-focus-inner,
+button::-moz-focus-inner, header.navigation .sign-up::-moz-focus-inner, .modal-b .btn::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0; }
@@ -366,29 +366,29 @@ th {
  * http://bitters.bourbon.io
  * Copyright 2013–2014 thoughtbot, inc.
  * MIT License */
-button, header.navigation .sign-up,
+button, header.navigation .sign-up, .modal-b .btn,
 input[type="submit"] {
   -webkit-font-smoothing: antialiased;
-  background-color: transparent;
+  background-color: #00b2ca;
   border-radius: 0px;
-  color: white;
+  color: #FEFEFE;
   display: inline-block;
   font-size: 0.9em;
   font-weight: bold;
   line-height: 1;
-  padding: 0.75em 1em;
+  padding: 0.75em 3em;
   text-decoration: none;
   border: 1px solid #00b2ca; }
-  button:hover, header.navigation .sign-up:hover,
+  button:hover, header.navigation .sign-up:hover, .modal-b .btn:hover,
   input[type="submit"]:hover {
-    background-color: #006f7e;
+    background-color: #18e3ff;
     color: white; }
-  button:disabled, header.navigation .sign-up:disabled,
+  button:disabled, header.navigation .sign-up:disabled, .modal-b .btn:disabled,
   input[type="submit"]:disabled {
     cursor: not-allowed;
     opacity: 0.5; }
 
-button.primary, header.navigation .primary.sign-up,
+button.primary, header.navigation .primary.sign-up, .modal-b .primary.btn,
 input[type="submit"].primary {
   -webkit-font-smoothing: antialiased;
   background-color: #00b2ca;
@@ -401,16 +401,16 @@ input[type="submit"].primary {
   padding: 0.75em 1em;
   text-decoration: none;
   border: 1px solid #00b2ca; }
-  button.primary:hover, header.navigation .primary.sign-up:hover,
+  button.primary:hover, header.navigation .primary.sign-up:hover, .modal-b .primary.btn:hover,
   input[type="submit"].primary:hover {
-    background-color: #006f7e;
+    background-color: #18e3ff;
     color: white; }
-  button.primary:disabled, header.navigation .primary.sign-up:disabled,
+  button.primary:disabled, header.navigation .primary.sign-up:disabled, .modal-b .primary.btn:disabled,
   input[type="submit"].primary:disabled {
     cursor: not-allowed;
     opacity: 0.5; }
 
-button.secondary, header.navigation .secondary.sign-up,
+button.secondary, header.navigation .secondary.sign-up, .modal-b .secondary.btn,
 input[type="submit"].secondary {
   -webkit-font-smoothing: antialiased;
   background-color: #FFFFFF;
@@ -423,11 +423,11 @@ input[type="submit"].secondary {
   padding: 0.75em 1em;
   text-decoration: none;
   border: 1px solid #00b2ca; }
-  button.secondary:hover, header.navigation .secondary.sign-up:hover,
+  button.secondary:hover, header.navigation .secondary.sign-up:hover, .modal-b .secondary.btn:hover,
   input[type="submit"].secondary:hover {
-    background-color: #006f7e;
+    background-color: #18e3ff;
     color: white; }
-  button.secondary:disabled, header.navigation .secondary.sign-up:disabled,
+  button.secondary:disabled, header.navigation .secondary.sign-up:disabled, .modal-b .secondary.btn:disabled,
   input[type="submit"].secondary:disabled {
     cursor: not-allowed;
     opacity: 0.5; }
@@ -479,9 +479,9 @@ a {
   color: #00b2ca;
   text-decoration: none; }
   a:hover {
-    color: #006f7e; }
+    color: #18e3ff; }
   a:active, a:focus {
-    color: #006f7e;
+    color: #18e3ff;
     outline: none; }
 
 hr {
@@ -510,9 +510,9 @@ cite {
 
 fieldset {
   background: #f7f7f7;
-  border: 1px solid #DDD;
+  border: 0px solid;
   margin: 0 0 0.75em 0;
-  padding: 1.5em; }
+  padding: 0.75em; }
 
 input,
 label,
@@ -523,7 +523,9 @@ select {
 
 label {
   font-weight: bold;
-  margin-bottom: 0.375em; }
+  display: inline-block;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em; }
   label.required:after {
     content: "*"; }
   label abbr {
@@ -616,7 +618,7 @@ dl {
   dl dd {
     margin: 0; }
 
-button, header.navigation .sign-up,
+button, header.navigation .sign-up, .modal-b .btn,
 input[type="submit"] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -627,7 +629,7 @@ input[type="submit"] {
   user-select: none;
   vertical-align: middle;
   white-space: nowrap; }
-  button.primary, header.navigation .primary.sign-up,
+  button.primary, header.navigation .primary.sign-up, .modal-b .primary.btn,
   input[type="submit"].primary {
     float: right; }
 
@@ -876,6 +878,7 @@ header.navigation {
     padding-right: 1em;
     padding-left: 0.5em;
     clear: both;
+    float: left;
     background: #505050; }
     header.navigation .info-tools:after {
       content: "";
@@ -883,6 +886,21 @@ header.navigation {
       clear: both; }
     @media screen and (min-width: 53.75em) {
       header.navigation .info-tools {
+        background: transparent;
+        float: left;
+        clear: none; } }
+  header.navigation .help-tools {
+    display: block;
+    padding-right: 1em;
+    padding-left: 0.5em;
+    clear: both;
+    background: #505050; }
+    header.navigation .help-tools:after {
+      content: "";
+      display: table;
+      clear: both; }
+    @media screen and (min-width: 53.75em) {
+      header.navigation .help-tools {
         background: transparent;
         float: right;
         clear: none; } }
@@ -904,7 +922,7 @@ header.navigation {
         @media screen and (min-width: 53.75em) {
           header.navigation .search-bar .search-and-submit input[type=search] {
             width: 100%; } }
-      header.navigation .search-bar .search-and-submit button[type=submit], header.navigation .search-bar .search-and-submit [type=submit].sign-up {
+      header.navigation .search-bar .search-and-submit button[type=submit], header.navigation .search-bar .search-and-submit [type=submit].sign-up, header.navigation .search-bar .search-and-submit .modal-b [type=submit].btn, .modal-b header.navigation .search-bar .search-and-submit [type=submit].btn {
         background-color: white;
         border-radius: 3px;
         border: none;
@@ -932,22 +950,22 @@ header.navigation {
         left: auto;
         outline: none;
         padding: 0 15px; }
-        header.navigation .search-bar .search-and-submit button[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit [type=submit].sign-up:hover:not(:disabled) {
+        header.navigation .search-bar .search-and-submit button[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit [type=submit].sign-up:hover:not(:disabled), header.navigation .search-bar .search-and-submit .modal-b [type=submit].btn:hover:not(:disabled), .modal-b header.navigation .search-bar .search-and-submit [type=submit].btn:hover:not(:disabled) {
           background-color: white;
           cursor: pointer; }
-        header.navigation .search-bar .search-and-submit button[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit [type=submit].sign-up:active:not(:disabled), header.navigation .search-bar .search-and-submit button[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit [type=submit].sign-up:focus:not(:disabled) {
+        header.navigation .search-bar .search-and-submit button[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit [type=submit].sign-up:active:not(:disabled), header.navigation .search-bar .search-and-submit .modal-b [type=submit].btn:active:not(:disabled), .modal-b header.navigation .search-bar .search-and-submit [type=submit].btn:active:not(:disabled), header.navigation .search-bar .search-and-submit button[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit [type=submit].sign-up:focus:not(:disabled), header.navigation .search-bar .search-and-submit .modal-b [type=submit].btn:focus:not(:disabled), .modal-b header.navigation .search-bar .search-and-submit [type=submit].btn:focus:not(:disabled) {
           background-color: #f2f2f2;
           cursor: pointer; }
-        header.navigation .search-bar .search-and-submit button[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit [type=submit].sign-up:hover:not(:disabled) {
+        header.navigation .search-bar .search-and-submit button[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit [type=submit].sign-up:hover:not(:disabled), header.navigation .search-bar .search-and-submit .modal-b [type=submit].btn:hover:not(:disabled), .modal-b header.navigation .search-bar .search-and-submit [type=submit].btn:hover:not(:disabled) {
           background-color: white;
           cursor: pointer; }
-        header.navigation .search-bar .search-and-submit button[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit [type=submit].sign-up:active:not(:disabled), header.navigation .search-bar .search-and-submit button[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit [type=submit].sign-up:focus:not(:disabled) {
+        header.navigation .search-bar .search-and-submit button[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit [type=submit].sign-up:active:not(:disabled), header.navigation .search-bar .search-and-submit .modal-b [type=submit].btn:active:not(:disabled), .modal-b header.navigation .search-bar .search-and-submit [type=submit].btn:active:not(:disabled), header.navigation .search-bar .search-and-submit button[type=submit]:focus:not(:disabled), header.navigation .search-bar .search-and-submit [type=submit].sign-up:focus:not(:disabled), header.navigation .search-bar .search-and-submit .modal-b [type=submit].btn:focus:not(:disabled), .modal-b header.navigation .search-bar .search-and-submit [type=submit].btn:focus:not(:disabled) {
           background-color: #f2f2f2;
           cursor: pointer; }
-        header.navigation .search-bar .search-and-submit button[type=submit]:disabled, header.navigation .search-bar .search-and-submit [type=submit].sign-up:disabled {
+        header.navigation .search-bar .search-and-submit button[type=submit]:disabled, header.navigation .search-bar .search-and-submit [type=submit].sign-up:disabled, header.navigation .search-bar .search-and-submit .modal-b [type=submit].btn:disabled, .modal-b header.navigation .search-bar .search-and-submit [type=submit].btn:disabled {
           opacity: 0.5;
           cursor: not-allowed; }
-        header.navigation .search-bar .search-and-submit button[type=submit] img, header.navigation .search-bar .search-and-submit [type=submit].sign-up img {
+        header.navigation .search-bar .search-and-submit button[type=submit] img, header.navigation .search-bar .search-and-submit [type=submit].sign-up img, header.navigation .search-bar .search-and-submit .modal-b [type=submit].btn img, .modal-b header.navigation .search-bar .search-and-submit [type=submit].btn img {
           height: 12px;
           opacity: .7; }
     @media screen and (min-width: 53.75em) {
@@ -1134,7 +1152,7 @@ header.navigation {
       content: "";
       display: table;
       clear: both; }
-    .hero .hero-inner button, .hero .hero-inner header.navigation .sign-up, header.navigation .hero .hero-inner .sign-up {
+    .hero .hero-inner button, .hero .hero-inner header.navigation .sign-up, header.navigation .hero .hero-inner .sign-up, .hero .hero-inner .modal-b .btn, .modal-b .hero .hero-inner .btn {
       font-size: 0.9em;
       outline: none;
       float: left;
@@ -1276,6 +1294,286 @@ header.navigation {
   -moz-flex: 1 1 30em;
   -ms-flex: 1 1 30em;
   flex: 1 1 30em; }
+
+.dropdown {
+  text-align: right; }
+
+.dropdown-container {
+  display: inline-block;
+  position: relative; }
+
+.dropdown-description {
+  background: #f7f7f7;
+  border-bottom-left-radius: 0px;
+  border-bottom: 1px solid silver;
+  border-left: 1px solid silver;
+  border-top-left-radius: 0px;
+  border-top: 1px solid silver;
+  color: #999999;
+  float: left;
+  font-size: .7em;
+  line-height: 40px;
+  margin-bottom: 0;
+  padding: 0 0.5em 0 1em; }
+  @media screen and (min-width: 53.75em) {
+    .dropdown-description {
+      font-size: 1em; } }
+
+.dropdown-button {
+  background: #f7f7f7;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  border-top: 1px solid silver;
+  border-right: 1px solid silver;
+  border-bottom: 1px solid silver;
+  cursor: pointer;
+  float: right;
+  font-size: .7em;
+  font-weight: 800;
+  line-height: 40px;
+  margin-bottom: 0;
+  padding: 0 3.5em 0 0.5em;
+  position: relative; }
+  @media screen and (min-width: 53.75em) {
+    .dropdown-button {
+      font-size: 1em;
+      padding: 0 2.5em 0 0.5em; } }
+
+.dropdown-button:hover {
+  background-color: #efefef; }
+
+.dropdown-button:after {
+  color: #333;
+  content: "\25BE";
+  display: block;
+  position: absolute;
+  right: 1em;
+  top: 0; }
+
+.dropdown-link {
+  cursor: pointer;
+  float: right;
+  font-size: .8em;
+  font-weight: 500;
+  line-height: 40px;
+  margin-bottom: 0;
+  padding: 2.5em 0 0.5em;
+  position: relative; }
+  @media screen and (min-width: 53.75em) {
+    .dropdown-link {
+      font-size: .8em;
+      padding: 0.9em; } }
+
+.dropdown-menu {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background: #f7f7f7;
+  border-radius: 0px;
+  border: 1px solid silver;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  color: #333;
+  cursor: pointer;
+  display: none;
+  overflow: show;
+  position: absolute;
+  right: 0;
+  top: 55px;
+  width: 228px;
+  z-index: 99999; }
+  .dropdown-menu:before {
+    position: absolute;
+    top: 0;
+    right: 1em;
+    bottom: 0;
+    left: 0;
+    color: #f7f7f7;
+    content: "\25b2";
+    font-size: 1.4em;
+    pointer-events: none;
+    text-shadow: 0 -2px 2px rgba(0, 0, 0, 0.3);
+    top: -1em; }
+
+.dropdown-menu li {
+  border-bottom: 1px solid silver;
+  color: #333;
+  padding: 0.5em; }
+
+.dropdown-menu li:hover {
+  background: #efefef; }
+
+.dropdown-menu li:first-child {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px; }
+
+.dropdown-menu li:last-child {
+  border: none;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px; }
+
+.show-menu {
+  display: block; }
+
+#loginContainer {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 10px;
+  color: #333;
+  cursor: pointer;
+  left: 0;
+  width: auto;
+  text-align: left; }
+  #loginContainer:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+#loginContainer h3 {
+  margin-bottom: 10px; }
+
+.modal-b {
+  float: left; }
+  .modal-b label {
+    cursor: pointer;
+    margin-bottom: 0; }
+  .modal-b label img {
+    border-radius: 150px;
+    display: block;
+    max-width: 300px; }
+  .modal-b input[type="checkbox"] {
+    display: none; }
+    .modal-b input[type="checkbox"]#rememberme {
+      display: inline-block; }
+  .modal-b .link {
+    color: #00b2ca;
+    margin: 1.2em; }
+  .modal-b .modal-open {
+    overflow: hidden; }
+  .modal-b .modal-window {
+    -webkit-transition: opacity 0.25s ease;
+    -moz-transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    text-align: left;
+    visibility: hidden;
+    z-index: 99999999999; }
+    .modal-b .modal-window .modal-bg {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      cursor: pointer; }
+  .modal-b .modal-close {
+    position: absolute;
+    top: 1.5em;
+    right: 1.5em;
+    height: 1.5em;
+    width: 1.5em;
+    cursor: pointer;
+    background: #f7f7f7; }
+    .modal-b .modal-close:after, .modal-b .modal-close:before {
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      bottom: 0;
+      left: 50%;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      height: 1.5em;
+      width: 0.15em;
+      background: #DDD;
+      content: '';
+      display: block;
+      margin: -3px 0 0 -1px; }
+    .modal-b .modal-close:hover:after, .modal-b .modal-close:hover:before {
+      background: #c4c4c4; }
+    .modal-b .modal-close:before {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+  .modal-b .modal-inner {
+    -webkit-transition: opacity 0.25s ease;
+    -moz-transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease;
+    border-radius: 0px;
+    background: #f7f7f7;
+    margin: auto;
+    max-height: 95%;
+    position: relative;
+    overflow: auto;
+    width: 95%;
+    padding: 1.5em;
+    margin-top: .6em; }
+    @media screen and (min-width: 40em) {
+      .modal-b .modal-inner {
+        padding: 3em;
+        width: 60%;
+        max-height: 60%;
+        margin-top: 10em; } }
+    @media screen and (min-width: 53.75em) {
+      .modal-b .modal-inner {
+        width: 50%;
+        margin-top: 10em; } }
+    .modal-b .modal-inner h1 {
+      color: #333;
+      margin-bottom: .6em;
+      text-align: left;
+      text-transform: capitalize; }
+    .modal-b .modal-inner p.body, .modal-b .modal-inner p.intro {
+      font-size: 0.9em;
+      max-width: 100% !important;
+      text-align: left; }
+      .modal-b .modal-inner p.body.intro, .modal-b .modal-inner p.intro.intro {
+        color: #477DCA;
+        line-height: 1.6em; }
+      .modal-b .modal-inner p.body.body, .modal-b .modal-inner p.intro.body {
+        color: #333;
+        line-height: 1.45em; }
+        @media screen and (min-width: 40em) {
+          .modal-b .modal-inner p.body.body, .modal-b .modal-inner p.intro.body {
+            -webkit-columns: 2 8em;
+            -moz-columns: 2 8em;
+            columns: 2 8em; } }
+    .modal-b .modal-inner a.cta {
+      color: white;
+      display: inline-block;
+      margin-right: .5em;
+      margin-top: 1em; }
+      .modal-b .modal-inner a.cta:last-child {
+        padding: 0 2em; }
+  .modal-b .modal-state:checked + .modal-window {
+    opacity: 1;
+    visibility: visible; }
+  .modal-b .modal-state:checked + .modal-window .modal-inner {
+    top: 0; }
+
+#loginContainer {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  color: #333;
+  cursor: pointer;
+  left: 0;
+  width: auto;
+  text-align: left; }
+  #loginContainer:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 .container-box {
   max-width: 68em;

@@ -47,8 +47,8 @@ $base-accent-color: $teal;
 
 // Link Colors
 $base-link-color: $base-accent-color;
-$hover-link-color: darken($base-accent-color, 15);
-$base-button-color: $transparent;
+$hover-link-color: lighten($base-accent-color, 15);
+$base-button-color: $teal;
 $primary-button-color: $teal;
 $secondary-button-color: $white;
 $hover-button-color: $hover-link-color;
@@ -72,3 +72,7 @@ $form-box-shadow: inset 0 1px 3px rgba(black,0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
 $form-font-size: $base-font-size;
 $form-font-family: $base-font-family;
+
+//no
+$no-border:0px solid;
+

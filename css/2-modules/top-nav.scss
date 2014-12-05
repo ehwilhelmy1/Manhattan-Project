@@ -339,6 +339,23 @@ ul li.info-link {
     padding-right: $navigation-padding;
     padding-left: $navigation-padding/2;
     clear: both;
+    float:left;
+    background: #505050;
+
+    @include media($large-screen) {
+      background: transparent;
+      float: left;
+      clear: none;
+    }
+    
+  }
+
+ .help-tools {
+    @include clearfix;
+    display: block;
+    padding-right: $navigation-padding;
+    padding-left: $navigation-padding/2;
+    clear: both;
     background: #505050;
 
     @include media($large-screen) {
@@ -347,7 +364,6 @@ ul li.info-link {
       clear: none;
     }
   }
-
 
 
   // Search bar
