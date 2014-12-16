@@ -594,11 +594,13 @@ th {
   border-bottom: 1px solid #b7b7b7;
   font-weight: bold;
   padding: 0.75em 0;
-  text-align: left; }
+  text-align: left;
+  font-size: 1em; }
 
 td {
   border-bottom: 1px solid #DDD;
-  padding: 0.75em 0; }
+  padding: 0.75em 0.5em;
+  font-size: .8em; }
 
 tr,
 td,
@@ -1092,13 +1094,14 @@ header.navigation {
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     height: 14em;
-    background: #f7f7f7;
+    background: #FFFFFF;
     width: 100%;
     overflow: hidden;
     float: left;
     padding: 2em;
-    border-right: 1px solid rgba(51, 51, 51, 0.2);
-    border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+    margin-top: 2em;
+    /*border-right: $grid-item-border;
+    border-bottom: $grid-item-border;*/
     cursor: pointer; }
     @media screen and (min-width: 53.75em) {
       .grid-items-lines .grid-item {
@@ -1112,13 +1115,12 @@ header.navigation {
     opacity: .2; }
   .grid-items-lines .grid-item h1 {
     color: #333;
-    font-size: 1.3em;
     margin-bottom: .4em; }
   .grid-items-lines .grid-item p {
     color: rgba(51, 51, 51, 0.6); }
     @media screen and (min-width: 40em) {
       .grid-items-lines .grid-item p {
-        max-width: 70%; } }
+        max-width: 100%; } }
   @media screen and (min-width: 53.75em) {
     .grid-items-lines .grid-item-big {
       width: 66.66667%; } }
@@ -1432,133 +1434,139 @@ header.navigation {
 #loginContainer h3 {
   margin-bottom: 10px; }
 
-.modal-b {
-  float: left; }
-  .modal-b label {
-    cursor: pointer;
-    margin-bottom: 0; }
-  .modal-b label img {
-    border-radius: 150px;
-    display: block;
-    max-width: 300px; }
-  .modal-b input[type="checkbox"] {
-    display: none; }
-    .modal-b input[type="checkbox"]#rememberme {
-      display: inline-block; }
-  .modal-b .link {
-    color: #00b2ca;
-    margin: 1.2em; }
-  .modal-b .modal-open {
-    overflow: hidden; }
-  .modal-b .modal-window {
-    -webkit-transition: opacity 0.25s ease;
-    -moz-transition: opacity 0.25s ease;
-    transition: opacity 0.25s ease;
-    position: fixed;
+.modal-b label {
+  cursor: pointer;
+  margin-bottom: 0;
+  color: #333;
+  font-size: 1em; }
+.modal-b label img {
+  border-radius: 150px;
+  display: block;
+  max-width: 300px; }
+.modal-b input[type="checkbox"] {
+  display: none; }
+  .modal-b input[type="checkbox"]#rememberme {
+    display: inline-block; }
+.modal-b .link {
+  color: #00b2ca;
+  margin: 1.2em; }
+.modal-b .block {
+  color: #00b2ca; }
+.modal-b h4 {
+  color: #333;
+  font-size: 1.2em;
+  font-weight: 900; }
+.modal-b .modal-open {
+  overflow: hidden; }
+.modal-b .modal-window {
+  -webkit-transition: opacity 0.25s ease;
+  -moz-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  text-align: left;
+  visibility: hidden;
+  z-index: 99999999999; }
+  .modal-b .modal-window .modal-bg {
+    position: absolute;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background: rgba(0, 0, 0, 0.85);
-    opacity: 0;
-    text-align: left;
-    visibility: hidden;
-    z-index: 99999999999; }
-    .modal-b .modal-window .modal-bg {
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
-      cursor: pointer; }
-  .modal-b .modal-close {
+    cursor: pointer; }
+.modal-b .modal-close {
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em;
+  height: 1.5em;
+  width: 1.5em;
+  cursor: pointer;
+  background: #f7f7f7; }
+  .modal-b .modal-close:after, .modal-b .modal-close:before {
     position: absolute;
-    top: 1.5em;
-    right: 1.5em;
+    top: 3px;
+    right: 3px;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
     height: 1.5em;
-    width: 1.5em;
-    cursor: pointer;
-    background: #f7f7f7; }
-    .modal-b .modal-close:after, .modal-b .modal-close:before {
-      position: absolute;
-      top: 3px;
-      right: 3px;
-      bottom: 0;
-      left: 50%;
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg);
-      height: 1.5em;
-      width: 0.15em;
-      background: #DDD;
-      content: '';
-      display: block;
-      margin: -3px 0 0 -1px; }
-    .modal-b .modal-close:hover:after, .modal-b .modal-close:hover:before {
-      background: #c4c4c4; }
-    .modal-b .modal-close:before {
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
-      transform: rotate(-45deg); }
-  .modal-b .modal-inner {
-    -webkit-transition: opacity 0.25s ease;
-    -moz-transition: opacity 0.25s ease;
-    transition: opacity 0.25s ease;
-    border-radius: 0px;
-    background: #f7f7f7;
-    margin: auto;
-    max-height: 95%;
-    position: relative;
-    overflow: auto;
-    width: 95%;
-    padding: 1.5em;
-    margin-top: .6em; }
-    @media screen and (min-width: 40em) {
-      .modal-b .modal-inner {
-        padding: 3em;
-        width: 60%;
-        max-height: 60%;
-        margin-top: 10em; } }
-    @media screen and (min-width: 53.75em) {
-      .modal-b .modal-inner {
-        width: 50%;
-        margin-top: 10em; } }
-    .modal-b .modal-inner h1 {
+    width: 0.15em;
+    background: #DDD;
+    content: '';
+    display: block;
+    margin: -3px 0 0 -1px; }
+  .modal-b .modal-close:hover:after, .modal-b .modal-close:hover:before {
+    background: #c4c4c4; }
+  .modal-b .modal-close:before {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+.modal-b .modal-inner {
+  -webkit-transition: opacity 0.25s ease;
+  -moz-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+  border-radius: 0px;
+  background: #f7f7f7;
+  margin: auto;
+  max-height: 95%;
+  position: relative;
+  overflow: auto;
+  width: 95%;
+  padding: 1.5em;
+  margin-top: .6em; }
+  @media screen and (min-width: 40em) {
+    .modal-b .modal-inner {
+      padding: 3em;
+      width: 60%;
+      max-height: 60%;
+      margin-top: 10em; } }
+  @media screen and (min-width: 53.75em) {
+    .modal-b .modal-inner {
+      width: 50%;
+      margin-top: 10em; } }
+  .modal-b .modal-inner h1 {
+    color: #333;
+    margin-bottom: .6em;
+    text-align: left;
+    text-transform: capitalize; }
+  .modal-b .modal-inner p.body, .modal-b .modal-inner p.intro {
+    font-size: 0.9em;
+    max-width: 100% !important;
+    text-align: left; }
+    .modal-b .modal-inner p.body.intro, .modal-b .modal-inner p.intro.intro {
+      color: #477DCA;
+      line-height: 1.6em; }
+    .modal-b .modal-inner p.body.body, .modal-b .modal-inner p.intro.body {
       color: #333;
-      margin-bottom: .6em;
-      text-align: left;
-      text-transform: capitalize; }
-    .modal-b .modal-inner p.body, .modal-b .modal-inner p.intro {
-      font-size: 0.9em;
-      max-width: 100% !important;
-      text-align: left; }
-      .modal-b .modal-inner p.body.intro, .modal-b .modal-inner p.intro.intro {
-        color: #477DCA;
-        line-height: 1.6em; }
-      .modal-b .modal-inner p.body.body, .modal-b .modal-inner p.intro.body {
-        color: #333;
-        line-height: 1.45em; }
-        @media screen and (min-width: 40em) {
-          .modal-b .modal-inner p.body.body, .modal-b .modal-inner p.intro.body {
-            -webkit-columns: 2 8em;
-            -moz-columns: 2 8em;
-            columns: 2 8em; } }
-    .modal-b .modal-inner a.cta {
-      color: white;
-      display: inline-block;
-      margin-right: .5em;
-      margin-top: 1em; }
-      .modal-b .modal-inner a.cta:last-child {
-        padding: 0 2em; }
-  .modal-b .modal-state:checked + .modal-window {
-    opacity: 1;
-    visibility: visible; }
-  .modal-b .modal-state:checked + .modal-window .modal-inner {
-    top: 0; }
+      line-height: 1.45em; }
+      @media screen and (min-width: 40em) {
+        .modal-b .modal-inner p.body.body, .modal-b .modal-inner p.intro.body {
+          -webkit-columns: 2 8em;
+          -moz-columns: 2 8em;
+          columns: 2 8em; } }
+  .modal-b .modal-inner a.cta {
+    color: white;
+    display: inline-block;
+    margin-right: .5em;
+    margin-top: 1em; }
+    .modal-b .modal-inner a.cta:last-child {
+      padding: 0 2em; }
+.modal-b .modal-state:checked + .modal-window {
+  opacity: 1;
+  visibility: visible; }
+.modal-b .modal-state:checked + .modal-window .modal-inner {
+  top: 0; }
 
 #loginContainer {
   max-width: 68em;
@@ -1661,6 +1669,43 @@ header.navigation {
           list-style-type: circle; }
     .container-box section.product-details {
       padding: 1.5em; }
+    .container-box section.product-steps {
+      padding: 1.5em;
+      text-align: center; }
+      .container-box section.product-steps .alpha {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%;
+        margin-left: 17.05961%;
+        padding: 1.5em; }
+        .container-box section.product-steps .alpha:last-child {
+          margin-right: 0; }
+        @media screen and (max-width: 500px) {
+          .container-box section.product-steps .alpha {
+            float: left;
+            display: block;
+            margin-right: 7.42297%;
+            width: 100%;
+            margin-left: 0%; }
+            .container-box section.product-steps .alpha:last-child {
+              margin-right: 0; } }
+      .container-box section.product-steps .beta {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%;
+        padding: 1.5em; }
+        .container-box section.product-steps .beta:last-child {
+          margin-right: 0; }
+        @media screen and (max-width: 500px) {
+          .container-box section.product-steps .beta {
+            float: left;
+            display: block;
+            margin-right: 7.42297%;
+            width: 100%; }
+            .container-box section.product-steps .beta:last-child {
+              margin-right: 0; } }
     .container-box section hr {
       margin: .6em 0px; }
     .container-box section h5 {

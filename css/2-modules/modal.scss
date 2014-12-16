@@ -4,11 +4,14 @@
   $modal-close-color: $light-gray;
   $modal-image-height: 135px;
   $modal-image-width: $modal-image-height;
-  float:left;
+
 
   label {
     cursor: pointer;
     margin-bottom: 0;
+    color:$dark-gray;
+    font-size:1em;
+
 
   }
 
@@ -32,6 +35,15 @@
   .link{
     color:$teal;
     margin:1.2em;
+  }
+   .block{
+    color:$teal;
+    
+  }
+  h4{
+    color:$dark-gray;
+      font-size:1.2em;
+      font-weight:900;
   }
 
   .modal-open {

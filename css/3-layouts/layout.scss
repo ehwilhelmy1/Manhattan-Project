@@ -11,16 +11,15 @@
         padding: $base-spacing;
         .back {
             @include span-columns(6);
-             @include media($mobile) {
+            @include media($mobile) {
                 @include span-columns(2);
             }
         }
         .continue {
             @include span-columns(6);
-             @include media($mobile) {
+            @include media($mobile) {
                 @include span-columns(2);
             }
-        
         }
         aside {
             @include span-columns(6);
@@ -44,14 +43,33 @@
         &.product-details {
             padding: $base-spacing
         }
-       
+        &.product-steps {
+            padding: $base-spacing;
+            text-align: center;
+            .alpha {
+                @include span-columns(4);
+                @include shift(2);
+                padding: $base-spacing;
+                @include media($mobile) {
+                    @include span-columns(4);
+                    @include shift(0);
+                }
+            }
+            .beta {
+                @include span-columns(4);
+                padding: $base-spacing;
+                @include media($mobile) {
+                    @include span-columns(4);
+                }
+            }
+            h1 {}
+        }
         hr {
             margin: .6em 0px;
         }
         h5 {
             font-weight: 900;
         }
-
     }
     .sale {
         color: $sale;
