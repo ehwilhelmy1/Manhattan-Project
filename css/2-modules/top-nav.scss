@@ -23,7 +23,11 @@ header.navigation {
   z-index: 999;
    &.info{
     height: $info-height;
-    background: $light-gray
+    display:none;
+    background: $light-gray;
+     @include media ($horizontal-bar-mode) {
+      display: block;
+    }
    }
 
   .navigation-wrapper {
