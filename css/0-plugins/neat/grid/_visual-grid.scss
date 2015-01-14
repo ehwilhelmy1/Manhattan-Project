@@ -7,7 +7,11 @@
   background-image: unquote("linear-gradient(left, #{$values})");
 }
 
+<<<<<<< HEAD
 @if $visual-grid == true or $visual-grid == yes {
+=======
+@if $visual-grid == false {
+>>>>>>> origin/gh-pages
   body:before {
     content: '';
     display: inline-block;

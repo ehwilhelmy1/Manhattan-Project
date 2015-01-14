@@ -3,8 +3,13 @@
 }
 
 .grid-items-lines {
+<<<<<<< HEAD
   $grid-items-background: $base-background-color;
   $grid-item-background: $base-background-color;
+=======
+  $grid-items-background:$block-background-color;
+  $grid-item-background: $block-background-color;
+>>>>>>> origin/gh-pages
   $grid-item-border: 1px solid transparentize($base-font-color, .8); 
   $grid-item-columns: 4;
   $grid-item-big-columns: 8;
@@ -22,8 +27,14 @@
     overflow: hidden;
     float: left;
     padding: 2em;
+<<<<<<< HEAD
     border-right: $grid-item-border;
     border-bottom: $grid-item-border;
+=======
+    margin-top:2em;
+    /*border-right: $grid-item-border;
+    border-bottom: $grid-item-border;*/
+>>>>>>> origin/gh-pages
     cursor: pointer;
 
     @include media($large-screen) {
@@ -44,14 +55,22 @@
 
   .grid-item h1 {
       color: $grid-item-color;
+<<<<<<< HEAD
       font-size: 1.3em;
+=======
+  
+>>>>>>> origin/gh-pages
       margin-bottom: .4em;
     }
 
   .grid-item p {
       color: transparentize($grid-item-color, .4);
       @include media($medium-screen) {
+<<<<<<< HEAD
         max-width: 70%;
+=======
+        max-width: 100%;
+>>>>>>> origin/gh-pages
       }
     }
 
@@ -66,6 +85,7 @@
     }
   }
 
+<<<<<<< HEAD
   // this, below, might not be the most beautiful solution but it removes the outer borders by using the background color.
   .bottom-cover {
     position: absolute;
@@ -82,5 +102,8 @@
     width: 4px;
     background: $grid-items-background;
   }
+=======
+
+>>>>>>> origin/gh-pages
 }
 

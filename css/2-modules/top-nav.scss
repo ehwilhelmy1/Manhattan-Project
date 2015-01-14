@@ -1,9 +1,17 @@
 header.navigation {
   $navigation-padding: 1em;
+<<<<<<< HEAD
   $navigation-background: $white;
   $navigation-color: #676767;
   $navigation-color-hover: #69c4a1;
   $navigation-height: 60px;
+=======
+  $navigation-background: lighten($white, 90);
+  $navigation-color: #676767;
+  $navigation-color-hover: #69c4a1;
+  $navigation-height: 60px;
+  $logo-height: 80px;
+>>>>>>> origin/gh-pages
   $navigation-nav-button-background: $base-accent-color;
   $navigation-nav-button-background-hover: lighten($navigation-background, 10);
   $navigation-nav-button-border: 1px solid lighten($navigation-nav-button-background, 20);
@@ -11,14 +19,31 @@ header.navigation {
   $navigation-search-border: 1px solid darken($navigation-background, 5);
   $navigation-active-link-color: transparentize(white, 0.5);
   $navigation-submenu-padding: 1em;
+<<<<<<< HEAD
   $navigation-submenu-width: 12em;
   $horizontal-bar-mode: $large-screen;
+=======
+  $navigation-submenu-width: 22em;
+  $horizontal-bar-mode: $large-screen;
+  $info-height: 30px;
+>>>>>>> origin/gh-pages
 
   background-color: $navigation-background;
   border-bottom: 1px solid darken($navigation-background, 10);
   height: $navigation-height;
   width: 100%;
   z-index: 999;
+<<<<<<< HEAD
+=======
+   &.info{
+    height: $info-height;
+    display:none;
+    background: $light-gray;
+     @include media ($horizontal-bar-mode) {
+      display: block;
+    }
+   }
+>>>>>>> origin/gh-pages
 
   .navigation-wrapper {
     @include clearfix;
@@ -27,6 +52,7 @@ header.navigation {
     z-index: 9999;
   }
 
+<<<<<<< HEAD
   .logo {
     float: left;    
     max-height: $navigation-height;
@@ -36,6 +62,15 @@ header.navigation {
     img {
       max-height: $navigation-height;
       padding: .8em 0;
+=======
+  .logo {   
+    max-height: $navigation-height;
+    @include span-columns(1);
+
+    img {
+      max-height: $logo-height;
+      padding: 0;
+>>>>>>> origin/gh-pages
     }
   }
 
@@ -88,9 +123,34 @@ header.navigation {
     }
   }
 
+<<<<<<< HEAD
   // The nav items
 
   ul li.nav-link {
+=======
+  ul#info-menu {    
+    -webkit-transform-style: preserve-3d; // stop webkit flicker
+    clear: both;
+    display: none;
+    margin: 0 auto;
+    overflow: visible;
+    padding: 0;
+    width: 100%;
+    z-index: 9999;
+
+    @include media ($horizontal-bar-mode) {
+      display: inline;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  // The nav items
+
+  ul li.nav-link {
+
+
+>>>>>>> origin/gh-pages
     background: $navigation-background;
     display: block;
     line-height: $navigation-height;
@@ -127,6 +187,50 @@ header.navigation {
     border-bottom: 1px solid $navigation-active-link-color;
     padding-bottom: 3px;
   }
+<<<<<<< HEAD
+=======
+ul li.info-link {
+
+ 
+    background: $navigation-background;
+    display: block;
+    line-height: $info-height;
+    overflow: hidden;
+    padding-right: .4em;
+    text-align: right;
+    width: 100%;
+    z-index: 9999;
+    font-size:.7em;
+    border-right:1px solid $medium-gray;
+
+    @include media ($horizontal-bar-mode) {
+      background: transparent;
+      display: inline;
+      line-height: $info-height;
+      text-decoration: none;
+      width: auto;
+    }
+
+    a {
+      color: $navigation-color;
+      display: inline-block;
+      font-weight: 400;
+
+      @include media ($horizontal-bar-mode) {
+        padding-right: .4em;
+      }
+
+      &:hover {
+        color: $navigation-color-hover;
+      }
+    }
+  }
+
+  .active-nav-item a {
+    border-bottom: 1px solid $navigation-active-link-color;
+    padding-bottom: 3px;
+  }
+>>>>>>> origin/gh-pages
 
   // Sub menus
 
@@ -242,6 +346,13 @@ header.navigation {
     }
   }
 
+<<<<<<< HEAD
+=======
+
+
+  
+
+>>>>>>> origin/gh-pages
   // Elements on the far right
 
   .navigation-tools {
@@ -269,6 +380,41 @@ header.navigation {
     padding: .75em 1em;
   }
 
+<<<<<<< HEAD
+=======
+  .info-tools {
+    @include clearfix;
+    display: block;
+    padding-right: $navigation-padding;
+    padding-left: $navigation-padding/2;
+    clear: both;
+    float:left;
+    background: #505050;
+
+    @include media($large-screen) {
+      background: transparent;
+      float: left;
+      clear: none;
+    }
+  }
+
+ .help-tools {
+    @include clearfix;
+    display: block;
+    padding-right: $navigation-padding;
+    padding-left: $navigation-padding/2;
+    clear: both;
+    background: #505050;
+
+    @include media($large-screen) {
+      background: transparent;
+      float: right;
+      clear: none;
+    }
+  }
+
+
+>>>>>>> origin/gh-pages
   // Search bar
 
   .search-bar {

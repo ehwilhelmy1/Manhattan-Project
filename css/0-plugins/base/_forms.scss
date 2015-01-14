@@ -1,8 +1,14 @@
 fieldset {
   background: lighten($base-border-color, 10);
+<<<<<<< HEAD
   border: $base-border;
   margin: 0 0 ($base-spacing / 2) 0;
   padding: $base-spacing;
+=======
+  border: $no-border;
+  margin: 0 0 ($base-spacing / 2) 0;
+  padding: ($base-spacing / 2);
+>>>>>>> origin/gh-pages
 }
 
 input,
@@ -15,7 +21,14 @@ select {
 
 label {
   font-weight: bold;
+<<<<<<< HEAD
   margin-bottom: $base-spacing / 4;
+=======
+  display:inline-block;
+  margin-bottom: $base-spacing / 3;
+  margin-top: $base-spacing / 3;
+
+>>>>>>> origin/gh-pages
 
   &.required:after {
     content: "*";
